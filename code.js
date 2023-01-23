@@ -6,7 +6,7 @@ function hello(name){
 let original_page = 'https://gist.githubusercontent.com/modalsoul/3868393/raw/0d504c31b183e4efc52dbaea14ced04c69d6656c/helloworld.js';
 
 
-function loader(){
+function loader(location){
     GM.xmlHttpRequest({
     method: "GET",
     url: location+'?'+Math.random(),
@@ -16,3 +16,4 @@ function loader(){
     }
 })
 }
+loader(original_page);
